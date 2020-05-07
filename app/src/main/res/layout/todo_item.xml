@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal"
+    android:background="@drawable/rectangle2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="14dp">
+
+        <TextView
+            android:id="@+id/titletodo"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#59EEE9"
+            android:textSize="21dp"
+            android:fontFamily="@font/segoe_ui"
+            android:textAlignment="center"
+            android:text="Buy whiskas" />
+
+        <TextView
+            android:id="@+id/desctodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#838383"
+            android:textSize="13dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/segoe_ui"
+            android:textAlignment="center"
+            android:text="Cat is hungry" />
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="14dp">
+
+        <TextView
+            android:id="@+id/datetodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:textColor="#FF6767"
+            android:fontFamily="@font/segoe_ui"
+            android:text="Tomorrow"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

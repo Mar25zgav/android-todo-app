@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle1">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:text="Edit Task"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/roundrect"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#59EEE9"
+                android:textSize="18dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textAlignment="center"
+                android:text="Add title" />
+
+            <EditText
+                android:id="@+id/titletodo"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bginputtask"
+                android:padding="10dp"
+                android:maxLength="18"
+                android:hint="What?"
+                android:textColorHint="#B5B5B5"
+                android:textColor="#47BEBA"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#59EEE9"
+                android:textSize="18dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textAlignment="center"
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/desctodo"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bginputtask"
+                android:padding="10dp"
+                android:hint="How?"
+                android:maxLength="28"
+                android:textColorHint="#B5B5B5"
+                android:textColor="#47BEBA"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#59EEE9"
+                android:textSize="18dp"
+                android:fontFamily="@font/segoe_ui"
+                android:textAlignment="center"
+                android:text="Target" />
+
+            <EditText
+                android:id="@+id/datetodo"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bginputtask"
+                android:padding="10dp"
+                android:maxLength="8"
+                android:hint="When?"
+                android:textColorHint="#B5B5B5"
+                android:textColor="#47BEBA"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save"
+        android:textColor="#FFF"
+        android:textAllCaps="false"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:background="@drawable/bgbtncreate"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Delete"
+        android:textColor="#AFAFAF"
+        android:textAllCaps="false"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:background="@drawable/bgbtncancel"
+        android:textSize="20dp"/>
+
+</LinearLayout>
