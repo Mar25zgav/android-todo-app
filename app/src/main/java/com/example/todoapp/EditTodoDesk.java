@@ -42,7 +42,7 @@ public class EditTodoDesk extends AppCompatActivity {
 
         final String keyTodo = getIntent().getStringExtra("keytodo");
 
-        reference = FirebaseDatabase.getInstance().getReference().child("TodoApp").child("Todo" + keyTodo);
+        reference = FirebaseDatabase.getInstance().getReference().child("TodoApp" + MainActivity.userkey).child("Todo" + keyTodo);
 
         // Save changes on button click
         btnSave.setOnClickListener(new View.OnClickListener() {

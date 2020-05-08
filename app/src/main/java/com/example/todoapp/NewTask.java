@@ -37,11 +37,12 @@ public class NewTask extends AppCompatActivity {
         btnSaveTodo = findViewById(R.id.btnSaveTodo);
         btnCancel = findViewById(R.id.btnCancel);
 
+        // Save data to db when button clicked
         btnSaveTodo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reference = FirebaseDatabase.getInstance().getReference().child("TodoApp").child("Todo" + todoNum);
-                reference.addValueEventListener(new ValueEventListener() {
+                reference = FirebaseDatabase.getInstance().getReference().child("TodoApp" + MainActivity.userkey).child("Todo" + todoNum);
+                reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         dataSnapshot.getRef().child("titletodo").setValue(titletodo.getText().toString());
@@ -61,6 +62,7 @@ public class NewTask extends AppCompatActivity {
             }
         });
 
+        // Go to previus activity when button clicked
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

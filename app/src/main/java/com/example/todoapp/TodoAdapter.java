@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyViewHolder> {
-    Context context;
-    ArrayList<Todo> todoList;
+    private Context context;
+    private ArrayList<Todo> todoList;
 
     public TodoAdapter(Context context, ArrayList<Todo> todoList) {
         this.context = context;
@@ -27,18 +27,22 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        /* Set holder text fields from specific to-do */
         holder.titletodo.setText(todoList.get(position).getTitletodo());
         holder.desctodo.setText(todoList.get(position).getDesctodo());
         holder.datetodo.setText(todoList.get(position).getDatetodo());
 
+        /* Save to-do properties  */
         final String getTitleTodo = todoList.get(position).getTitletodo();
         final String getDescTodo = todoList.get(position).getDesctodo();
         final String getDateTodo = todoList.get(position).getDatetodo();
         final String getKeyTodo = todoList.get(position).getKeytodo();
 
+        /* To-do item pressed */
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /* Open edit activity and pass it to-do properties */
                 Intent a = new Intent(context, EditTodoDesk.class);
                 a.putExtra("titletodo", getTitleTodo);
                 a.putExtra("desctodo", getDescTodo);
