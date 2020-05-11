@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Todo> todoList;
     TodoAdapter todoAdapter;
     RecyclerView todo;
+    Toast backToast;
     static String userkey;
+    long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,5 +84,22 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "No data", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        // If player taps back button two times in 2s exit game
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            // Show toast with text
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+
+        // Save time user pressed back button
+        backPressedTime = System.currentTimeMillis();
     }
 }
